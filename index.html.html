@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>19's Birthday!</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(to bottom, #ffe1f0, #ffffff);
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    /* HERO */
+    .hero {
+      height: 90vh;
+      background: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(255, 255, 255, 0.55);
+      backdrop-filter: blur(4px);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 650px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.6);
+      border-radius: 20px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin: 0;
+      animation: glow 2.5s infinite ease-in-out;
+    }
+
+    @keyframes glow {
+      0% { text-shadow: 0 0 5px #ff4f9a; }
+      50% { text-shadow: 0 0 20px #ff2e84; }
+      100% { text-shadow: 0 0 5px #ff4f9a; }
+    }
+
+    .btn {
+      padding: 12px 25px;
+      border-radius: 25px;
+      background: #ff4f9a;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin-top: 15px;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.08);
+      background: #ff2e84;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+      transition: 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .floating {
+      position: absolute;
+      width: 50px;
+      animation: floatUp 6s infinite linear;
+      opacity: 0.85;
+    }
+
+    @keyframes floatUp {
+      0% { transform: translateY(50px); opacity: 0; }
+      20% { opacity: 1; }
+      100% { transform: translateY(-800px); opacity: 0; }
+    }
+
+    .confetti {
+      position: fixed;
+      top: -10px;
+      width: 8px;
+      height: 14px;
+      opacity: 0.9;
+      animation: fall 3.5s linear infinite;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(0) rotate(0deg); }
+      100% { transform: translateY(100vh) rotate(360deg); }
+    }
+
+    /* PLAY BUTTON PINK GLOW */
+    .music-btn {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      width: 80px;
+      height: 80px;
+      background: #ff007b;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 0 20px #ff0095;
+      cursor: pointer;
+      transition: 0.3s;
+      z-index: 999;
+    }
+
+    .music-btn:hover {
+      box-shadow: 0 0 35px #ff009d;
+      transform: scale(1.09);
+    }
+
+    .music-btn svg {
+      width: 35px;
+      fill: white;
+      margin-left: 4px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- FLOATING BALLOONS -->
+  <img class="floating" src="https://cdn-icons-png.flaticon.com/512/742/742751.png" style="left: 10%; animation-delay: 0s;" />
+  <img class="floating" src="https://cdn-icons-png.flaticon.com/512/742/742751.png" style="left: 50%; animation-delay: 2s; width: 60px;" />
+  <img class="floating" src="https://cdn-icons-png.flaticon.com/512/742/742751.png" style="left: 80%; animation-delay: 4s;" />
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-content">
+      <h1>Happy Birthday Sakde 🎉</h1>
+      <p>Enjoy your nineteen's birthday Yippiii ✨</p>
+      <p>The most special person ever born in this date💐</P>
+      <p>Before you start, please click the play button for music!</p>
+      <button class="btn" onclick="scrollToContent()">Click here to see what I have made for you!</button>
+    </div>
+  </div>
+
+  <!-- CONTENT -->
+  <section>
+    <h2>✨ I hope you achieve your big dream in this age!</h2>
+    <p> In this special day, on your birthday. I hope you can achive your all your big dream. I know this life is so hard to do. but thanks for living in this world, cus this world without you seems kinda boring and nothing special :D </p>
+    <p> Whatever you are doing right now, I hope you can enjoy it. Sometimes, things can be harder from time by time. But one thing you should know: you have did your best! I'm so proud of you Inaa!</p>
+    <p> And then, I know sometimes you feel like no one can understand you, but heyy! I'm here, you can tell me everything whenever you want, you are not alone, it's okay, I'm here</p>
+    <p> Today is your birthday, and I hope you can enjoy your nineteen's birthday even you know we are going older year by year. That's okay. I hope you can be happier from now on</p>
+    <p> Anyway..... </p>
+    <h2> HAPPY BIRTHDAY! ENJOY YOUR DAY!🥳💐🎂🎈🎉🎁</h2>
+  </section>
+
+  <section>
+    <h2>📸 Hihihi</h2>
+    <div class="gallery">
+      <img src="sakde1.jpg" />
+      <img src="sakde2.jpg" />
+      <img src="sakde3.png" />
+    </div>
+  </section>
+
+  <section>
+    <h2>🎬 A Little Video For You (awokawkawokwowkw) </h2>
+    <video width="100%" controls style="border-radius: 15px;">
+    <source src="videosakde.mp4" type="video/mp4">
+    </video>
+  </section>
+
+  <p style="margin-top: 15px; text-align: center;">
+  Hihihi semoga suka!✨
+  </p>
+  <p style="margin-top: 15px; text-align: center;">
+    HAVE A NICE DAY BUB💓</p>
+
+  <footer style="text-align:center; padding:30px; opacity:0.7; font-size:14px;">
+    Special for you, on your special day!❤️
+    <p>-Tara</p>
+  </footer>
+
+  <!-- COUNTDOWN SCRIPT -->
+  <script>
+    const eventDate = new Date("2026-01-25T18:00:00").getTime();
+    const countdownEl = document.getElementById("countdown");
+
+    setInterval(() => {
+      const now = Date.now();
+      const diff = eventDate - now;
+      if (diff <= 0) {
+        countdownEl.innerHTML = "🎉 Hari ini adalah hari spesialnya!";
+        return;
+      }
+
+      const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const m = Math.floor((diff / (1000 * 60)) % 60);
+      const s = Math.floor((diff / 1000) % 60);
+
+      countdownEl.innerHTML = `
+        <div class="time-box"><b>${d}</b><br>Hari</div>
+        <div class="time-box"><b>${h}</b><br>Jam</div>
+        <div class="time-box"><b>${m}</b><br>Menit</div>
+        <div class="time-box"><b>${s}</b><br>Detik</div>
+      `;
+    }, 1000);
+
+    /* CONFETTI */
+    function randomColor() {
+      const colors = ["#ff2e84", "#ff9ed1", "#ffc400", "#8adfff", "#9bff8a"];
+      return colors[Math.floor(Math.random() * colors.length)];
+    }
+
+    function spawnConfetti() {
+      const confetti = document.createElement("div");
+      confetti.classList.add("confetti");
+      confetti.style.left = Math.random() * 100 + "vw";
+      confetti.style.background = randomColor();
+      confetti.style.animationDuration = (3 + Math.random() * 2) + "s";
+      document.body.appendChild(confetti);
+
+      setTimeout(() => confetti.remove(), 5000);
+    }
+
+    setInterval(spawnConfetti, 150);
+
+    /* SCROLL */
+    function scrollToContent() {
+      window.scrollTo({ top: window.innerHeight, behavior: "smooth" });
+    }
+  </script>
+
+  <!-- AUDIO PLAYER -->
+  <audio id="music" src="wave to earth - love. (Clean Inst.) - BΞRGHUI.mp3"></audio>
+
+  <!-- PINK PLAY BUTTON -->
+  <div class="music-btn" onclick="playMusic()">
+    <svg viewBox="0 0 24 24">
+      <path d="M8 5v14l11-7z"></path>
+    </svg>
+  </div>
+
+  <script>
+    function playMusic() {
+      const audio = document.getElementById("music");
+      audio.play();
+      audio.loop = true;
+      alert("Music playing 🎵💗");
+    }
+  </script>
+
+</body>
+</html>
